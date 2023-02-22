@@ -1,0 +1,46 @@
+1. Pakurti kategorijos lentele:
+category.
+ 
+- name: string
+- enabled: bool
+- main: bool
+ 
+2. Prideti foreign key category_id prie books lenteles.
+2.1. Parašykite naują migraciją, kuri pašalintų perteklinį column main.
+ 
+3. Pakurti categories seed. Properciams naudokite fake
+ 
+#4. Viska sudekit i database seed, //NESPEJOM, tai kitam kartui
+ 
+5. Pakurkite nauja controlleri BookCategoryController
+ 
+6. Pridekite methoda index
+ 
+6.1. Methodas turi grazinti visas kategorijas.
+6.2. Pakurkite template, kuris isvestu kategoriju sarasa ir ju informacija
+ 
+7. Pridekite methoda show
+7.1. show methodas turi grazinti pagal id categorija(Category::find($id)) ir taip pat visas knygas
+7.2 Pakurkite template, kuris isvestu kategorija ir salia visu knygu sarasa.
+ 
+8. Pakurkite route /categories ir /categories/{id}
+ 
+ 
+Ta pati padarykite su authoriais:
+ 
+3. Pakurti author seed. Properciams naudokite fake
+ 
+#4. Viska sudekit i database seed, //NESPEJOM, tai kitam kartui
+ 
+5. Pakurkite nauja controlleri AuthorController
+ 
+6. Pridekite methoda index
+ 
+6.1. Methodas turi grazinti visus autorius.
+6.2. Pakurkite template, kuris isvestu autoriu sarasa ir ju visa informacija
+ 
+7. Pridekite methoda show
+7.1. show methodas turi grazinti pagal id authoriu(Author::find($id)) ir taip pat visas knygas
+7.2 Pakurkite template, kuris isvestu authoriu ir salia visu knygu sarasa.
+ 
+8. Pakurkite route /authors ir /authors/{id}

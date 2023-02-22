@@ -1,0 +1,41 @@
+1. Pakurkite nauja controlleri AuthorController
+ 
+1.1. Pridekite methoda index
+ 
+1.2. Methodas turi grazinti visus autorius.
+1.3. Pakurkite template, kuris isvestu autoriu sarasa ir ju visa informacija, 
+1.3.1 Taip pat reikia išvesti ir visas autoriaus knygas
+1.3.2 Tam naudokite surišimą one to many.
+1.4. Nepamirškite pridėti route: /authors
+ 
+2.1. Pridėkite papildomai methodą edit
+2.2. Edit methodas turi išvesti formos informaciją
+2.3. Sukurkite formos template, kuris turetų visus authoriaus laukus.
+2.4. Pridėkite formos validacija laukams, Laukai turi būti privalomi ir neilgesni negu 32 simboliai
+2.5. Jeigu paduoti nevalidūs duomenys išveskite klaidos pranešimus prie kiekvieno lauko
+2.6. Jeigu informacija teisinga tuomet išsaugokite informacija.
+2.7. Po išsaugojimo nukreipkite į autorių sąrašą.
+ 
+3.1. Pridėkite papildomai methoda delete
+3.2. Methodas delete turi patikrinti ar egzistuoja autorius ir jeigu egzistuoja reikia jį pašalinti.
+3.3. Po pakeitimo nukreipkite į autorių sąrašą.
+ 
+ 
+Papildomai!!!
+ 
+4.1. Sukurkite likusius knygos sąryšius su kategorijomis ir su authoriais jeigu jie dar nesukurti
+4.2. Sukurkite knygos create funkcija
+4.3. Create formoje turi būti išvedami visi autoriai ir visos kategorijos. Perduokite į template 'categories' => Category::all(), ir 'authors' => Author::all(),
+išveskite informaciją selecte panasiai i tokia:
+ 
+<select name="category_id">
+    <option></option>
+    @foreach($categories as $category)
+        <option value="{{ $category->id }}">{{$category->name}}</option>
+    @endforeach
+</select>
+ 
+4.4. Knygos saugojimo metu turi būti pridėtas ir autoriaus ir kategorijos objektas.
+4.5. Po išsaugojimo nukreipkite knygų sąrašą.
+ 
+5. Atlikte knygos edit funkcionalumas su category ir author prefilais.

@@ -1,0 +1,22 @@
+1. Sukurkite kontroleri ItemsController su artisan
+2. Sukurkite du methodus index ir show
+3. Sukurkite 2 routus products ir products/{id}
+4. products index metu išveskite masyva template
+[
+	[
+		'id' => 1,
+		'name' => "Obuolys",
+		'price' => 1.29
+	],
+	[
+		'id' => 2,
+		'name' => "Bananas",
+		'price' => 1,79
+	],
+]
+5. show methodo metu išveskite template informacija:
+	[
+		'id' => 1,
+		'name' => "Apelsinas",
+		'price' => 1.59
+	],
